@@ -18,5 +18,5 @@ Route::get('/', function () {
 });
 
 Route::group(['prefix' => 'admin'],function(){
-    route::get('/dashboard','App\Http\Controllers\Backend\DashboardController@dashboard')->name('admin.dashboard');
+    route::get('/dashboard','App\Http\Controllers\Backend\DashboardController@dashboard')->name('dashboard');
 });

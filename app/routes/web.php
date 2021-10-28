@@ -20,3 +20,5 @@ Route::get('/', function () {
 Route::group(['prefix' => 'admin'],function(){
     route::get('/dashboard','App\Http\Controllers\Backend\DashboardController@dashboard')->name('dashboard');
 });
+
+route::get('/blank-page','App\Http\Controllers\Backend\DashboardController@blank')->name('blank');

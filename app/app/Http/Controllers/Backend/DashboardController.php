@@ -16,6 +16,10 @@ class DashboardController extends Controller
     {
         return view('backend.pages.dashboard');
     }
+    public function blank()
+    {
+        return view('backend.pages.blank');
+    }
 
     /**
      * Show the form for creating a new resource.

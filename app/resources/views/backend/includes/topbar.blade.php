@@ -1,191 +1,450 @@
-    <!-- ########## START: HEAD PANEL ########## -->
-    <div class="br-header">
-      <div class="br-header-left">
-        <div class="navicon-left hidden-md-down"><a id="btnLeftMenu" href=""><i class="icon ion-navicon-round"></i></a></div>
-        <div class="navicon-left hidden-lg-up"><a id="btnLeftMenuMobile" href=""><i class="icon ion-navicon-round"></i></a></div>
-        <div class="input-group hidden-xs-down wd-170 transition">
-          <input id="searchbox" type="text" class="form-control" placeholder="Search">
-          <span class="input-group-btn">
-            <button class="btn btn-secondary" type="button"><i class="fas fa-search"></i></button>
-          </span>
-        </div><!-- input-group -->
-      </div><!-- br-header-left -->
-      <div class="br-header-right">
-        <nav class="nav">
-          <div class="dropdown">
-            <a href="" class="nav-link pd-x-7 pos-relative" data-toggle="dropdown">
-              <i class="icon ion-ios-email-outline tx-24"></i>
-              <!-- start: if statement -->
-              <span class="square-8 bg-danger pos-absolute t-15 r-0 rounded-circle"></span>
-              <!-- end: if statement -->
-            </a>
-            <div class="dropdown-menu dropdown-menu-header">
-              <div class="dropdown-menu-label">
-                <label>Messages</label>
-                <a href="">+ Add New Message</a>
-              </div><!-- d-flex -->
+<div class="row">
 
-              <div class="media-list">
-                <!-- loop starts here -->
-                <a href="" class="media-list-link">
-                  <div class="media">
-                    <img src="https://via.placeholder.com/500" alt="">
-                    <div class="media-body">
-                      <div>
-                        <p>Donna Seay</p>
-                        <span>2 minutes ago</span>
-                      </div><!-- d-flex -->
-                      <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring.</p>
-                    </div>
-                  </div><!-- media -->
-                </a>
-                <!-- loop ends here -->
-                <a href="" class="media-list-link read">
-                  <div class="media">
-                    <img src="https://via.placeholder.com/500" alt="">
-                    <div class="media-body">
-                      <div>
-                        <p>Samantha Francis</p>
-                        <span>3 hours ago</span>
-                      </div><!-- d-flex -->
-                      <p>My entire soul, like these sweet mornings of spring.</p>
-                    </div>
-                  </div><!-- media -->
-                </a>
-                <a href="" class="media-list-link read">
-                  <div class="media">
-                    <img src="https://via.placeholder.com/500" alt="">
-                    <div class="media-body">
-                      <div>
-                        <p>Robert Walker</p>
-                        <span>5 hours ago</span>
-                      </div><!-- d-flex -->
-                      <p>I should be incapable of drawing a single stroke at the present moment...</p>
-                    </div>
-                  </div><!-- media -->
-                </a>
-                <a href="" class="media-list-link read">
-                  <div class="media">
-                    <img src="https://via.placeholder.com/500" alt="">
-                    <div class="media-body">
-                      <div>
-                        <p>Larry Smith</p>
-                        <span>Yesterday</span>
-                      </div><!-- d-flex -->
-                      <p>When, while the lovely valley teems with vapour around me, and the meridian sun strikes...</p>
-                    </div>
-                  </div><!-- media -->
-                </a>
-                <div class="dropdown-footer">
-                  <a href=""><i class="fas fa-angle-down"></i> Show All Messages</a>
-                </div>
-              </div><!-- media-list -->
-            </div><!-- dropdown-menu -->
-          </div><!-- dropdown -->
-          <div class="dropdown">
-            <a href="" class="nav-link pd-x-7 pos-relative" data-toggle="dropdown">
-              <i class="icon ion-ios-bell-outline tx-24"></i>
-              <!-- start: if statement -->
-              <span class="square-8 bg-danger pos-absolute t-15 r-5 rounded-circle"></span>
-              <!-- end: if statement -->
-            </a>
-            <div class="dropdown-menu dropdown-menu-header">
-              <div class="dropdown-menu-label">
-                <label>Notifications</label>
-                <a href="">Mark All as Read</a>
-              </div><!-- d-flex -->
+    <!-- Profile Info and Notifications -->
+    <div class="col-md-6 col-sm-8 clearfix">
 
-              <div class="media-list">
-                <!-- loop starts here -->
-                <a href="" class="media-list-link read">
-                  <div class="media">
-                    <img src="https://via.placeholder.com/500" alt="">
-                    <div class="media-body">
-                      <p class="noti-text"><strong>Suzzeth Bungaos</strong> tagged you and 18 others in a post.</p>
-                      <span>October 03, 2017 8:45am</span>
-                    </div>
-                  </div><!-- media -->
+        <ul class="user-info pull-left pull-none-xsm">
+
+            <!-- Profile Info -->
+            <li class="profile-info dropdown"><!-- add class "pull-right" if you want to place this from right -->
+
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    <img src="{{asset('backend/assets/images/thumb-1@2x.png')}}" alt="" class="img-circle" width="44" />
+                    John Henderson
                 </a>
-                <!-- loop ends here -->
-                <a href="" class="media-list-link read">
-                  <div class="media">
-                    <img src="https://via.placeholder.com/500" alt="">
-                    <div class="media-body">
-                      <p class="noti-text"><strong>Mellisa Brown</strong> appreciated your work <strong>The Social Network</strong></p>
-                      <span>October 02, 2017 12:44am</span>
-                    </div>
-                  </div><!-- media -->
+
+                <ul class="dropdown-menu">
+
+                    <!-- Reverse Caret -->
+                    <li class="caret"></li>
+
+                    <!-- Profile sub-links -->
+                    <li>
+                        <a href="extra-timeline.html">
+                            <i class="entypo-user"></i>
+                            Edit Profile
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="mailbox.html">
+                            <i class="entypo-mail"></i>
+                            Inbox
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="extra-calendar.html">
+                            <i class="entypo-calendar"></i>
+                            Calendar
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <i class="entypo-clipboard"></i>
+                            Tasks
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+        </ul>
+
+        <ul class="user-info pull-left pull-right-xs pull-none-xsm">
+
+            <!-- Raw Notifications -->
+            <li class="notifications dropdown">
+
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                    <i class="entypo-attention"></i>
+                    <span class="badge badge-info">6</span>
                 </a>
-                <a href="" class="media-list-link read">
-                  <div class="media">
-                    <img src="https://via.placeholder.com/500" alt="">
-                    <div class="media-body">
-                      <p class="noti-text">20+ new items added are for sale in your <strong>Sale Group</strong></p>
-                      <span>October 01, 2017 10:20pm</span>
-                    </div>
-                  </div><!-- media -->
+
+                <ul class="dropdown-menu">
+                    <li class="top">
+                        <p class="small">
+                            <a href="#" class="pull-right">Mark all Read</a>
+                            You have <strong>3</strong> new notifications.
+                        </p>
+                    </li>
+
+                    <li>
+                        <ul class="dropdown-menu-list scroller">
+                            <li class="unread notification-success">
+                                <a href="#">
+                                    <i class="entypo-user-add pull-right"></i>
+
+                                    <span class="line">
+                                        <strong>New user registered</strong>
+                                    </span>
+
+                                    <span class="line small">
+                                        30 seconds ago
+                                    </span>
+                                </a>
+                            </li>
+
+                            <li class="unread notification-secondary">
+                                <a href="#">
+                                    <i class="entypo-heart pull-right"></i>
+
+                                    <span class="line">
+                                        <strong>Someone special liked this</strong>
+                                    </span>
+
+                                    <span class="line small">
+                                        2 minutes ago
+                                    </span>
+                                </a>
+                            </li>
+
+                            <li class="notification-primary">
+                                <a href="#">
+                                    <i class="entypo-user pull-right"></i>
+
+                                    <span class="line">
+                                        <strong>Privacy settings have been changed</strong>
+                                    </span>
+
+                                    <span class="line small">
+                                        3 hours ago
+                                    </span>
+                                </a>
+                            </li>
+
+                            <li class="notification-danger">
+                                <a href="#">
+                                    <i class="entypo-cancel-circled pull-right"></i>
+
+                                    <span class="line">
+                                        John cancelled the event
+                                    </span>
+
+                                    <span class="line small">
+                                        9 hours ago
+                                    </span>
+                                </a>
+                            </li>
+
+                            <li class="notification-info">
+                                <a href="#">
+                                    <i class="entypo-info pull-right"></i>
+
+                                    <span class="line">
+                                        The server is status is stable
+                                    </span>
+
+                                    <span class="line small">
+                                        yesterday at 10:30am
+                                    </span>
+                                </a>
+                            </li>
+
+                            <li class="notification-warning">
+                                <a href="#">
+                                    <i class="entypo-rss pull-right"></i>
+
+                                    <span class="line">
+                                        New comments waiting approval
+                                    </span>
+
+                                    <span class="line small">
+                                        last week
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="external">
+                        <a href="#">View all notifications</a>
+                    </li>
+                </ul>
+
+            </li>
+
+            <!-- Message Notifications -->
+            <li class="notifications dropdown">
+
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                    <i class="entypo-mail"></i>
+                    <span class="badge badge-secondary">10</span>
                 </a>
-                <a href="" class="media-list-link read">
-                  <div class="media">
-                    <img src="https://via.placeholder.com/500" alt="">
-                    <div class="media-body">
-                      <p class="noti-text"><strong>Julius Erving</strong> wants to connect with you on your conversation with <strong>Ronnie Mara</strong></p>
-                      <span>October 01, 2017 6:08pm</span>
-                    </div>
-                  </div><!-- media -->
+
+                <ul class="dropdown-menu">
+                    <li>
+                        <form class="top-dropdown-search">
+
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Search anything..." name="s" />
+                            </div>
+
+                        </form>
+
+                        <ul class="dropdown-menu-list scroller">
+                            <li class="active">
+                                <a href="#">
+                                    <span class="image pull-right">
+                                        <img src="{{asset('backend/assets/images/thumb-1@2x.png')}}" width="44" alt="" class="img-circle" />
+                                    </span>
+
+                                    <span class="line">
+                                        <strong>Luc Chartier</strong>
+                                        - yesterday
+                                    </span>
+
+                                    <span class="line desc small">
+                                        This ain’t our first item, it is the best of the rest.
+                                    </span>
+                                </a>
+                            </li>
+
+                            <li class="active">
+                                <a href="#">
+                                    <span class="image pull-right">
+                                        <img src="{{asset('backend/assets/images/thumb-2@2x.png')}}" width="44" alt="" class="img-circle" />
+                                    </span>
+
+                                    <span class="line">
+                                        <strong>Salma Nyberg</strong>
+                                        - 2 days ago
+                                    </span>
+
+                                    <span class="line desc small">
+                                        Oh he decisively impression attachment friendship so if everything.
+                                    </span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    <span class="image pull-right">
+                                        <img src="{{asset('backend/assets/images/thumb-3@2x.png')}}" width="44" alt="" class="img-circle" />
+                                    </span>
+
+                                    <span class="line">
+                                        Hayden Cartwright
+                                        - a week ago
+                                    </span>
+
+                                    <span class="line desc small">
+                                        Whose her enjoy chief new young. Felicity if ye required likewise so doubtful.
+                                    </span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    <span class="image pull-right">
+                                        <img src="{{asset('backend/assets/images/thumb-4@2x.png')}}" width="44" alt="" class="img-circle" />
+                                    </span>
+
+                                    <span class="line">
+                                        Sandra Eberhardt
+                                        - 16 days ago
+                                    </span>
+
+                                    <span class="line desc small">
+                                        On so attention necessary at by provision otherwise existence direction.
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="external">
+                        <a href="mailbox.html">All Messages</a>
+                    </li>
+                </ul>
+
+            </li>
+
+            <!-- Task Notifications -->
+            <li class="notifications dropdown">
+
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                    <i class="entypo-list"></i>
+                    <span class="badge badge-warning">1</span>
                 </a>
-                <div class="dropdown-footer">
-                  <a href=""><i class="fas fa-angle-down"></i> Show All Notifications</a>
-                </div>
-              </div><!-- media-list -->
-            </div><!-- dropdown-menu -->
-          </div><!-- dropdown -->
-          <div class="dropdown">
-            <a href="" class="nav-link nav-link-profile" data-toggle="dropdown">
-              <span class="logged-name hidden-md-down">Your Name</span>
-              <img src="https://via.placeholder.com/500" class="wd-32 rounded-circle" alt="">
-              <span class="square-10 bg-success"></span>
-            </a>
-            <div class="dropdown-menu dropdown-menu-header wd-250">
-              <div class="tx-center">
-                <a href=""><img src="https://via.placeholder.com/500" class="wd-80 rounded-circle" alt=""></a>
-                <h6 class="logged-fullname">Your Name</h6>
-                <p>Your Email</p>
-              </div>
-              <hr>
-              <div class="tx-center">
-                <span class="profile-earning-label">Earnings After Taxes</span>
-                <h3 class="profile-earning-amount">$13,230 <i class="icon ion-ios-arrow-thin-up tx-success"></i></h3>
-                <span class="profile-earning-text">Based on list price.</span>
-              </div>
-              <hr>
-              <ul class="list-unstyled user-profile-nav">
-                <li><a href=""><i class="icon ion-ios-person"></i> Edit Profile</a></li>
-                <li><a href=""><i class="icon ion-ios-gear"></i> Settings</a></li>
-                <li><a href=""><i class="icon ion-ios-download"></i> Downloads</a></li>
-                <li><a href=""><i class="icon ion-ios-star"></i> Favorites</a></li>
-                <li><a href=""><i class="icon ion-ios-folder"></i> Collections</a></li>
-                <li>
-                    <!-- Authentication -->
-                    <form method="POST" action="#">
-                        @csrf
-                    <a href="#">
-                        <i class="icon ion-power">
-                        </i> Sign Out</a>
-                    </form>
-                 </li>
-              </ul>
-            </div><!-- dropdown-menu -->
-          </div><!-- dropdown -->
-        </nav>
-        <div class="navicon-right">
-          <a id="btnRightMenu" href="" class="pos-relative">
-            <i class="icon ion-ios-chatboxes-outline"></i>
-            <!-- start: if statement -->
-            <span class="square-8 bg-danger pos-absolute t-10 r--5 rounded-circle"></span>
-            <!-- end: if statement -->
-          </a>
-        </div><!-- navicon-right -->
-      </div><!-- br-header-right -->
-    </div><!-- br-header -->
-    <!-- ########## END: HEAD PANEL ########## -->
+
+                <ul class="dropdown-menu">
+                    <li class="top">
+                        <p>You have 6 pending tasks</p>
+                    </li>
+
+                    <li>
+                        <ul class="dropdown-menu-list scroller">
+                            <li>
+                                <a href="#">
+                                    <span class="task">
+                                        <span class="desc">Procurement</span>
+                                        <span class="percent">27%</span>
+                                    </span>
+
+                                    <span class="progress">
+                                        <span style="width: 27%;" class="progress-bar progress-bar-success">
+                                            <span class="sr-only">27% Complete</span>
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="task">
+                                        <span class="desc">App Development</span>
+                                        <span class="percent">83%</span>
+                                    </span>
+
+                                    <span class="progress progress-striped">
+                                        <span style="width: 83%;" class="progress-bar progress-bar-danger">
+                                            <span class="sr-only">83% Complete</span>
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="task">
+                                        <span class="desc">HTML Slicing</span>
+                                        <span class="percent">91%</span>
+                                    </span>
+
+                                    <span class="progress">
+                                        <span style="width: 91%;" class="progress-bar progress-bar-success">
+                                            <span class="sr-only">91% Complete</span>
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="task">
+                                        <span class="desc">Database Repair</span>
+                                        <span class="percent">12%</span>
+                                    </span>
+
+                                    <span class="progress progress-striped">
+                                        <span style="width: 12%;" class="progress-bar progress-bar-warning">
+                                            <span class="sr-only">12% Complete</span>
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="task">
+                                        <span class="desc">Backup Create Progress</span>
+                                        <span class="percent">54%</span>
+                                    </span>
+
+                                    <span class="progress progress-striped">
+                                        <span style="width: 54%;" class="progress-bar progress-bar-info">
+                                            <span class="sr-only">54% Complete</span>
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="task">
+                                        <span class="desc">Upgrade Progress</span>
+                                        <span class="percent">17%</span>
+                                    </span>
+
+                                    <span class="progress progress-striped">
+                                        <span style="width: 17%;" class="progress-bar progress-bar-important">
+                                            <span class="sr-only">17% Complete</span>
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="external">
+                        <a href="#">See all tasks</a>
+                    </li>
+                </ul>
+
+            </li>
+
+        </ul>
+
+    </div>
+
+
+    <!-- Raw Links -->
+    <div class="col-md-6 col-sm-4 clearfix hidden-xs">
+
+        <ul class="list-inline links-list pull-right">
+
+            <!-- Language Selector -->
+            <li class="dropdown language-selector">
+
+                Language: &nbsp;
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-close-others="true">
+                    <img src="{{asset('backend/assets/images/flags/flag-uk.png')}}" width="16" height="16" />
+                </a>
+
+                <ul class="dropdown-menu pull-right">
+                    <li>
+                        <a href="#">
+                            <img src="{{asset('backend/assets/images/flags/flag-de.png')}}" width="16" height="16" />
+                            <span>Deutsch</span>
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="#">
+                            <img src="{{asset('backend/assets/images/flags/flag-uk.png')}}" width="16" height="16" />
+                            <span>English</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="{{asset('backend/assets/images/flags/flag-fr.png')}}" width="16" height="16" />
+                            <span>François</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="{{asset('backend/assets/images/flags/flag-al.png')}}" width="16" height="16" />
+                            <span>Shqip</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="{{asset('assets/images/flags/flag-es.png')}}" width="16" height="16" />
+                            <span>Español</span>
+                        </a>
+                    </li>
+                </ul>
+
+            </li>
+
+            <li class="sep"></li>
+
+
+            <li>
+                <a href="#" data-toggle="chat" data-collapse-sidebar="1">
+                    <i class="entypo-chat"></i>
+                    Chat
+
+                    <span class="badge badge-success chat-notifications-badge is-hidden">0</span>
+                </a>
+            </li>
+
+            <li class="sep"></li>
+
+            <li>
+                <a href="extra-login.html">
+                    Log Out <i class="entypo-logout right"></i>
+                </a>
+            </li>
+        </ul>
+
+    </div>
+
+</div>
+
+<hr/>

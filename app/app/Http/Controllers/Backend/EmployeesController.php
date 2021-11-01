@@ -4,6 +4,11 @@ namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
+use App\Models\Backend\Employees;
+use File;
+use Image;
+
 
 class EmployeesController extends Controller
 {
@@ -14,7 +19,8 @@ class EmployeesController extends Controller
      */
     public function index()
     {
-        //
+        $employees = Employees::orderBy('id','asc')->get();
+        return view('backend.pages.employee.manage',compact('employees'));
     }
 
     /**

@@ -6,6 +6,8 @@
 	<link rel="stylesheet" href="{{asset('backend/assets/css/neon-theme.css')}}">
 	<link rel="stylesheet" href="{{asset('backend/assets/css/neon-forms.css')}}">
 	<link rel="stylesheet" href="{{asset('backend/assets/css/custom.css')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+
 
 	<script src="{{asset('backend/assets/js/jquery-1.11.3.min.js')}}"></script>
 

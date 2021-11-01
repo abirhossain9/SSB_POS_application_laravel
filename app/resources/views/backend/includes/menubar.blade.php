@@ -32,84 +32,20 @@
         <ul id="main-menu" class="main-menu">
             <!-- add class "multiple-expanded" to allow multiple submenus to open -->
             <!-- class "auto-inherit-active-class" will automatically add "active" class for parent elements who are marked already with class "active" -->
-            <li class="opened active has-sub">
+            <li class="opened has-sub">
                 <a href="index.html">
-                    <i class="entypo-gauge"></i>
-                    <span class="title">Dashboard</span>
+                    <i class="entypo-user"></i>
+                    <span class="title">Employee</span>
                 </a>
                 <ul class="visible">
                     <li>
-                        <a href="index.html">
-                            <span class="title">Dashboard 1</span>
+                        <a href="{{route('employee.manage')}}">
+                            <span class="title">Manage All Employee</span>
                         </a>
                     </li>
                     <li>
-                        <a href="dashboard-2.html">
-                            <span class="title">Dashboard 2</span>
-                        </a>
-                    </li>
-                    <li class="active">
-                        <a href="dashboard-3.html">
-                            <span class="title">Dashboard 3</span>
-                        </a>
-                    </li>
-                    <li class="has-sub">
-                        <a href="skin-black.html">
-                            <span class="title">Skins</span>
-                        </a>
-                        <ul>
-                            <li>
-                                <a href="skin-black.html">
-                                    <span class="title">Black Skin</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="skin-white.html">
-                                    <span class="title">White Skin</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="skin-purple.html">
-                                    <span class="title">Purple Skin</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="skin-cafe.html">
-                                    <span class="title">Cafe Skin</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="skin-red.html">
-                                    <span class="title">Red Skin</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="skin-green.html">
-                                    <span class="title">Green Skin</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="skin-yellow.html">
-                                    <span class="title">Yellow Skin</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="skin-blue.html">
-                                    <span class="title">Blue Skin</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="skin-facebook.html">
-                                    <span class="title">Facebook Skin</span>
-                                    <span class="badge badge-secondary badge-roundless">New</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="highlights.html">
-                            <span class="title">What's New</span>
-                            <span class="badge badge-success badge-roundless">v2.0</span>
+                        <a href="{{route('employee.store')}}">
+                            <span class="title">Add New Employee</span>
                         </a>
                     </li>
                 </ul>

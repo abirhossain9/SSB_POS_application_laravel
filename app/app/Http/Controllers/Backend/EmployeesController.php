@@ -30,7 +30,7 @@ class EmployeesController extends Controller
      */
     public function create()
     {
-        //
+        return view('backend.pages.employee.create');
     }
 
     /**

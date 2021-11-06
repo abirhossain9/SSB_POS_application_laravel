@@ -7,8 +7,8 @@
     </div>
 </div>
 <div class="br-pagebody" style="
-box-shadow: 2px 2px 1px #d7d0d0;
-">
+box-shadow: 1px 1px 2px 2px #b9b2b2;
+padding:2%;">
     <div class="row">
         <div class="col-lg-12">
             {{-- page body content start --}}

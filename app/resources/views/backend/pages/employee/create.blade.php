@@ -52,7 +52,7 @@ padding:2%;
                                     </div>
                                     <div class="form-gorup">
                                         <label>Address</label>
-                                        <input type="text" name="Address" class="form-control">
+                                        <input type="text" name="address" class="form-control" required="required" autocomplete="off" >
                                     </div>
 
                                 </div>

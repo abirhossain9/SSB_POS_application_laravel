@@ -50,7 +50,15 @@ padding:2%;">
                                     <td>{{$employee->phone}}</td>
                                     <td>{{$employee->email}}</td>
                                     <td>{{$employee->address}}</td>
-                                    <td>{{$employee->group}}</td>
+                                    <td>
+                                        @if ($employee->group==1)
+                                        <span class="badge badge-success">Owner</span>
+                                        @elseif ($employee->group==2)
+                                        <span class="badge badge-info">Admin</span>
+                                        @elseif ($employee->group==3)
+                                        <span class="badge badge-warning">Salesman</span>
+                                        @endif
+                                    </td>
                                     <td>
                                         @if ($employee->status==1)
                                         <span class="badge badge-success">active</span>

@@ -44,7 +44,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="{{route('employee.store')}}">
+                        <a href="{{route('employee.create')}}">
                             <span class="title">Add New Employee</span>
                         </a>
                     </li>

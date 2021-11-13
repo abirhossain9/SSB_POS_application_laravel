@@ -50,6 +50,24 @@
                     </li>
                 </ul>
             </li>
+            <li class="opened has-sub">
+                <a href="index.html">
+                    <i class="entypo-user"></i>
+                    <span class="title">Supplier</span>
+                </a>
+                <ul class="visible">
+                    <li>
+                        <a href="{{route('supplier.manage')}}">
+                            <span class="title">Manage All Supplier</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{route('supplier.create')}}">
+                            <span class="title">Add New Supplier</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
             <li class="has-sub">
                 <a href="layout-api.html">
                     <i class="entypo-layout"></i>

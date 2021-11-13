@@ -28,6 +28,14 @@ Route::group(['prefix' => 'admin'],function(){
         Route::post('/update/{id}','App\Http\Controllers\Backend\EmployeesController@update')->name('employee.update');
         Route::post('/destroy/{id}','App\Http\Controllers\Backend\EmployeesController@destroy')->name('employee.destroy');
     });
+    Route::group(['prefix' => '/supplier'], function(){
+        Route::get('/manage','App\Http\Controllers\Backend\SuppliersController@index')->name('supplier.manage');
+        Route::get('/create','App\Http\Controllers\Backend\SuppliersController@create')->name('supplier.create');
+        Route::post('/store','App\Http\Controllers\Backend\SuppliersController@store')->name('supplier.store');
+        Route::get('/edit/{id}','App\Http\Controllers\Backend\SuppliersController@edit')->name('supplier.edit');
+        Route::post('/update/{id}','App\Http\Controllers\Backend\SuppliersController@update')->name('supplier.update');
+        Route::post('/destroy/{id}','App\Http\Controllers\Backend\SuppliersController@destroy')->name('supplier.destroy');
+    });
 });
 
 route::get('/blank-page','App\Http\Controllers\Backend\DashboardController@blank')->name('blank');

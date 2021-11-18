@@ -8,4 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class Category extends Model
 {
     use HasFactory;
+    protected $fillbale = [
+        'name',
+        'desc',
+        'image',
+        'parent_id',
+    ];
 }

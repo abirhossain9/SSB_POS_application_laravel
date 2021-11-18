@@ -68,6 +68,24 @@
                     </li>
                 </ul>
             </li>
+            <li class="opened has-sub">
+                <a href="index.html">
+                    <i class="fa fa-list-alt" aria-hidden="true"></i>
+                    <span class="title">Category</span>
+                </a>
+                <ul class="visible">
+                    <li>
+                        <a href="{{route('category.manage')}}">
+                            <span class="title">Manage All Category</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{route('category.create')}}">
+                            <span class="title">Add New Category</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
             <li class="has-sub">
                 <a href="layout-api.html">
                     <i class="entypo-layout"></i>

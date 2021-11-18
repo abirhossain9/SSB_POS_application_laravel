@@ -17,8 +17,8 @@ class CreateCategoriesTable extends Migration
             $table->id();
             $table->string('name')->unique();
             $table->string('desc')->nullable();
-            $table->string('image')->unique();
-            $table->integer('parent_id')->nullable();
+            $table->string('image')->unique()->nullable();
+            $table->integer('parent_id')->default(0);
             $table->timestamps();
         });
     }

@@ -49,7 +49,7 @@ padding:2%;
                                     <img src="{{asset('backend/assets/images/category/'.$category->image)}}" alt="" width="40">
                                     @endif
                                     <input class="form-control-file" type="file" name="image">
-                                 </div>
+                                   </div>
                                 </div>
                             </div>
                             <div class="form-group">

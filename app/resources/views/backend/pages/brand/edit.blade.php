@@ -3,8 +3,8 @@
 <div class="br-pagetitle">
     <i class="icon ion-ios-home-outline"></i>
     <div>
-        <h4>Create New Category</h4>
-        <p class="mg-b-0">Add New Category</p>
+        <h4>Update Brand</h4>
+        <p class="mg-b-0">Update brand informations from here</p>
     </div>
 </div>
 
@@ -18,42 +18,31 @@ padding:2%;
 
             <div class="card bd-0 shadow-base">
                 <div class="pd-25">
-                        <form action="{{route('category.update',$category->id)}}" method="POST" enctype="multipart/form-data">
+                        <form action="{{route('brand.update',$brand->id)}}" method="POST" enctype="multipart/form-data">
                             @csrf
                             <div class="row">
                                 <div class="col-lg-12">
                                     <div class="form-group">
-                                        <label>Category Name</label>
-                                        <input type="text" value="{{$category->name}}" name="name" class="form-control" required="required" autocomplete="off">
+                                        <label>Brand Name</label>
+                                        <input type="text" value="{{$brand->name}}" name="name" class="form-control" required="required" autocomplete="off">
                                     </div>
-                                    <div class="form-group">
-                                        <label>Parent Category</label>
-                                        <select class="form-control" name="parent_id">
-                                            <option value="0">Please Select Parent Category If Any</option>
-                                            @foreach ($primary_category as $pc)
-                                            <option value="{{$pc->id}}" @if($pc->id == $category->parent_id)
-                                                selected
-                                            @endif>{{$pc->name}}</option>
-                                            @endforeach
-                                        </select>
+                                   <div class="form-group">
+                                      <label>Brand Description</label>
+                                      <textarea class="form-control" rows="5" name="desc"> {{$brand->desc}} </textarea>
                                    </div>
                                    <div class="form-group">
-                                      <label>Category Description</label>
-                                      <textarea class="form-control" rows="5" name="desc">{{$category->desc}}</textarea>
-                                   </div>
-                                   <div class="form-group">
-                                    <label>Category Image</label><br>
-                                    @if($category->image == null)
+                                    <label>Brand Image</label><br>
+                                    @if($brand->image == null)
                                     no image uploaded
                                     @else
-                                    <img src="{{asset('backend/assets/images/category/'.$category->image)}}" alt="" width="40">
+                                    <img src="{{asset('backend/assets/images/brand/'.$brand->image)}}" alt="" width="40">
                                     @endif
                                     <input class="form-control-file" type="file" name="image">
-                                 </div>
+                                   </div>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <input type="submit" name="updateCategory" value="Update Category" class=" btn btn-success btn-teal mg-b-10">
+                                <input type="submit" name="updateBrand" value="Save Changes" class=" btn btn-success btn-teal mg-b-10">
                             </div>
                         </form>
                     <!-- d-flex -->

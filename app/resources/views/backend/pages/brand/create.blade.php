@@ -3,8 +3,8 @@
 <div class="br-pagetitle">
     <i class="icon ion-ios-home-outline"></i>
     <div>
-        <h4>Create New Category</h4>
-        <p class="mg-b-0">Add New Category</p>
+        <h4>Create New Brand</h4>
+        <p class="mg-b-0">Add New Brand</p>
     </div>
 </div>
 

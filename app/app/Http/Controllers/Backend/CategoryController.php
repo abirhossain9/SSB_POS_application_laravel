@@ -84,7 +84,14 @@ class CategoryController extends Controller
      */
     public function edit($id)
     {
-        //
+        $category = Category::find($id);
+        $primary_category = Category::orderBy('name','asc')->where('parent_id',0)->get();
+        if(!empty($category)){
+            return view('backend.pages.category.edit',compact('category','primary_category'));
+        }
+        else{
+            return redirect()->route('category.manage');
+        }
     }
 
     /**
@@ -96,7 +103,22 @@ class CategoryController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $category = Category::find($id);
+        $category->name = $request->name;
+        $category->desc = $request->desc;
+        $category->parent_id = $request->parent_id;
+        if(!empty($request->image)){
+            if(File::exists('backend/assets/images/category/'.$category->image)){
+                File::delete('backend/assets/images/category/'.$category->image);
+            }
+            $image = $request->file('image');
+            $img = rand() . '.' . $image->getClientOriginalExtension();
+            $location = public_path('backend/assets/images/category/'.$img);
+            Image::make($image)->save($location);
+            $category->image = $img;
+        }
+        $category->save();
+        return redirect()->route('category.manage');
     }
 
     /**
@@ -107,6 +129,23 @@ class CategoryController extends Controller
      */
     public function destroy($id)
     {
-        //
+       $category = Category::find($id);
+       $sub_categories = Category::orderBy('name','asc')->where('parent_id',$id)->get();
+    //    dd($sub_category);
+    //    exit();
+    if(!empty($sub_categories)){
+        foreach($sub_categories as $sub_category){
+            if(File::exists('backend/assets/images/category/'.$sub_category->image)){
+                File::delete('backend/assets/images/category/'.$sub_category->image);
+                }
+                 $sub_category->delete();
+         }
+    }
+     if(File::exists('backend/assets/images/category/'.$category->image)){
+        File::delete('backend/assets/images/category/'.$category->image);
+        }
+         $category->delete();
+         return redirect()->route('category.manage');
+
     }
 }

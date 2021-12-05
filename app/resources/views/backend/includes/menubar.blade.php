@@ -104,6 +104,24 @@
                     </li>
                 </ul>
             </li>
+            <li class="opened has-sub">
+                <a href="index.html">
+                    <i class="fa fa-list-alt" aria-hidden="true"></i>
+                    <span class="title">Promotin</span>
+                </a>
+                <ul class="visible">
+                    <li>
+                        <a href="{{route('promotion.manage')}}">
+                            <span class="title">Manage All Promotion</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{route('promotion.create')}}">
+                            <span class="title">Add New Promotion</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
             <li class="has-sub">
                 <a href="layout-api.html">
                     <i class="entypo-layout"></i>

@@ -52,6 +52,14 @@ Route::group(['prefix' => 'admin'],function(){
         Route::post('/update/{id}','App\Http\Controllers\Backend\BrandController@update')->name('brand.update');
         Route::post('/destroy/{id}','App\Http\Controllers\Backend\BrandController@destroy')->name('brand.destroy');
     });
+    Route::group(['prefix' => '/promotion'], function(){
+        Route::get('/manage','App\Http\Controllers\Backend\PromotionController@index')->name('promotion.manage');
+        Route::get('/create','App\Http\Controllers\Backend\PromotionController@create')->name('promotion.create');
+        Route::post('/store','App\Http\Controllers\Backend\PromotionController@store')->name('promotion.store');
+        Route::get('/edit/{id}','App\Http\Controllers\Backend\PromotionController@edit')->name('promotion.edit');
+        Route::post('/update/{id}','App\Http\Controllers\Backend\PromotionController@update')->name('promotion.update');
+        Route::post('/destroy/{id}','App\Http\Controllers\Backend\PromotionController@destroy')->name('promotion.destroy');
+    });
 });
 
 route::get('/blank-page','App\Http\Controllers\Backend\DashboardController@blank')->name('blank');

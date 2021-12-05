@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
+use App\Models\Backend\Promotion;
 use Illuminate\Http\Request;
 
 class PromotionController extends Controller
@@ -14,7 +15,8 @@ class PromotionController extends Controller
      */
     public function index()
     {
-        //
+        $promotions = Promotion::orderBy('promotion_code','asc')->get();
+        return view('backend.pages.promotion.manage',compact('promotions'));
     }
 
     /**
@@ -24,7 +26,7 @@ class PromotionController extends Controller
      */
     public function create()
     {
-        //
+        return view('backend.pages.promotion.create');
     }
 
     /**
@@ -35,7 +37,14 @@ class PromotionController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $promotion = new Promotion();
+        $promotion->promotion_code = $request->promotion_code;
+        $promotion->prmotion_price = $request->prmotion_price;
+        $promotion->start_date = $request->start_date;
+        $promotion->end_date =  $request->end_date;
+        $promotion->status = $request->status;
+        $promotion->save();
+        return redirect()->route('promotion.manage');
     }
 
     /**
@@ -57,7 +66,13 @@ class PromotionController extends Controller
      */
     public function edit($id)
     {
-        //
+        $promotion = Promotion::find($id);
+        if(!empty($promotion)){
+            return view('backend.pages.promotion.edit',compact('promotion'));
+        }
+        else{
+            return redirect()->route('promotion.manage');
+        }
     }
 
     /**
@@ -69,7 +84,14 @@ class PromotionController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $promotion = Promotion::find($id);
+        $promotion->promotion_code = $request->promotion_code;
+        $promotion->prmotion_price = $request->prmotion_price;
+        $promotion->start_date = $request->start_date;
+        $promotion->end_date =  $request->end_date;
+        $promotion->status = $request->status;
+        $promotion->save();
+        return redirect()->route('promotion.manage');
     }
 
     /**
@@ -80,6 +102,8 @@ class PromotionController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $promotion = Promotion::find($id);
+        $promotion->delete();
+        return redirect()->route('promotion.manage');
     }
 }
